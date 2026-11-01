@@ -1,0 +1,32 @@
+Monkeytype TUI is a modified terminal implementation written in Rust.
+It is not affiliated with or endorsed by Monkeytype.
+
+Monkeytype reference source and derived assets:
+Copyright Miodec and Monkeytype contributors.
+https://github.com/monkeytypegame/monkeytype
+Distributed under the GNU General Public License, version 3 or later.
+The original source is available at the project URL above.
+Derived assets include dictionary JSON, English quotes, theme color values,
+and a rasterization of the original logo SVG.
+
+Roboto Mono Regular:
+Copyright 2015 The Roboto Mono Project Authors.
+https://github.com/googlefonts/robotomono
+Apache License 2.0; see assets/RobotoMono-LICENSE.txt.
+Converted from the WOFF2 bundled in the Monkeytype checkout to TTF,
+preserving the original glyph outlines and metrics.
+
+Lexend Deca Regular:
+Copyright 2019 The Lexend Project Authors.
+https://github.com/googlefonts/lexend
+SIL Open Font License 1.1; see assets/Lexend-OFL.txt.
+Converted from Monkeytype's bundled WOFF2 to TTF, preserving outlines and metrics.
+
+Font Awesome Free solid font:
+Copyright Fonticons, Inc.
+https://github.com/FortAwesome/Font-Awesome/tree/6.x
+Fonts licensed under the SIL Open Font License 1.1.
+See assets/FontAwesome-LICENSE.txt.
+
+All fonts retain their respective licenses. The application code is GPL-3.0-or-later.
+This software comes without warranty; see LICENSE.

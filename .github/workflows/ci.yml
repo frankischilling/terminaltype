@@ -1,0 +1,30 @@
+name: Checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  linux:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+      - name: Install Rust tools
+        run: |
+          rustup update stable --profile minimal
+          rustup default stable
+          rustup component add rustfmt clippy
+      - name: Check formatting
+        run: cargo fmt --check
+      - name: Lint
+        run: cargo clippy --locked --all-targets -- -D warnings
+      - name: Unit tests
+        run: cargo test --locked
+      - name: Release build
+        run: cargo build --release --locked
+      - name: Terminal integration
+        run: python3 tools/smoke_pty.py
